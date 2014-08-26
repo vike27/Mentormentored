@@ -6,6 +6,8 @@ gem 'rails', '4.1.1'
 
 gem 'bootstrap-sass', '~> 3.1.1'
 
+gem 'devise'
+
 group :development do
 	gem 'sqlite3'
 end

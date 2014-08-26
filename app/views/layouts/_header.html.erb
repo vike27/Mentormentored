@@ -10,16 +10,13 @@
     <div class="navbar-container-right">
       
       <ul class="nav nav-pills navbar-right">
-        <li><%= link_to "Log In",    root_path %></li>
-        <li><%= link_to "Log Out",    root_path %></li>
-        <li><%= link_to "Sign Up",    root_path %></li>
         <li>  
-            <%# if current_user.present? %>
-                <%#= link_to 'Sign Out',destroy_user_session_path, :method => :delete %>
-            <%# else %>
-                <%#= link_to 'Sign In', new_user_session_path %>
+            <% if current_user.present? %>
+                <%= link_to 'Sign Out',destroy_user_session_path, :method => :delete %>
+            <% else %>
+                <%= link_to 'Sign In', new_user_session_path %>
         </li>
-        <li><%#= link_to 'Register Now!', new_user_registration_path %><%# end %></li>
+        <li><%= link_to 'Register Now!', new_user_registration_path %><% end %></li>
       </ul>
 
     </div>
